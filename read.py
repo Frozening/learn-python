@@ -9,6 +9,5 @@ while True:
 	stin = line
 	i = stin.split(':')
 	print i
-	j = i[1][:-1]
-	stinformation[i[0]] = j
+	stinformation[i[0]] = i[1][:-1]
 print stinformation
