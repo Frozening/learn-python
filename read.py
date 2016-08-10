@@ -1,3 +1,4 @@
+stinformation = {}
 f = file('score.txt','r')
 while True:
         line = f.readline()
@@ -8,6 +9,6 @@ while True:
 	stin = line
 	i = stin.split(':')
 	print i
-	stinformation = {}
-	stinformation[i[0]] = i[1]
-  	print stinformation
+	j = i[1][:-1]
+	stinformation[i[0]] = j
+print stinformation
