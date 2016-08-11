@@ -5,13 +5,17 @@ while True:
         if len(line) == 0:
                 break	
 	stin = line
-	i = stin.split(':')
-	stinformation[i[0]] = tuple(i[1]i[:-1].split(','))
+	students = stin.split(':')
+	name = students[0]
+	details = students[1]
+	detail = tuple(details[:-1].split(','))
+	sex = detail[0]
+	age = int(detail[1])
+	score = int(detail[2])
+	stinformation[name] = (sex,age,score)
 print stinformation
 
 name = raw_input('Please enter a name:')
 if stinformation.has_key(name):
-	j = stinformation[name]
-	k = int(j[1])
-	l = int(j[2])
-	print "the student's sex,age and score are %s,%d and %d" %(j[0],k,l)
+	ziliao = stinformation[name]
+	print "the student's sex,age and score are %s,%d and %d" %(ziliao[0],int(ziliao[1]),int(ziliao[2]))
