@@ -13,7 +13,6 @@ while True:
 	age = int(detail[1])
 	score = int(detail[2])
 	stinformation[name] = (sex,age,score)
-print stinformation
 
 name = raw_input('Please enter a name:')
 if stinformation.has_key(name):
